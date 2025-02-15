@@ -56,6 +56,10 @@ aside { /* position fixed */
     & > img {
         align-self: center;
     }
+
+    & > img:nth-child(2) {
+        display: none;
+    }
 }
 
 .container > p:first-child {
@@ -101,4 +105,22 @@ header {
 main {
     grid-area: main;
     /* background-color: var(--blue); */
+}
+
+/* Mobile and Tablets */
+@media(max-width: 768px) {
+    span {
+        display: none;
+    }
+
+    aside > img {
+        display: none;
+    }
+
+    aside > img:nth-child(2) {
+        display: block;
+        width: 50%;
+        height: 50%;
+        place-self: center;
+    }
 }
