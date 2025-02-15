@@ -42,6 +42,10 @@ aside { /* position fixed */
     background-color: var(--violet);
 }
 
+h1 {
+    margin: auto auto;
+}
+
 a {
     color: var(--white);
 }
