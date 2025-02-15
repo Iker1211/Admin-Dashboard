@@ -43,11 +43,19 @@ aside { /* position fixed */
     background-color: var(--violet);
 }
 
-aside > a {
+.anchor_container {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: 2 / -1;
+    justify-content: center;
+}
+
+aside a {
     display: flex;
     align-items: center;
     gap: calc(var(--font-size-base) / 2);
     color: var(--white);
+    text-decoration: none;
 }
 
 header {
