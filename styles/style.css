@@ -58,11 +58,11 @@ aside { /* position fixed */
     }
 }
 
-aside > p:first-child {
+.container > p:first-child {
     font-size: 0.7em;
     position: absolute;
-    bottom: 0;
-    left: 25%;
+    bottom: 1%;
+    right: 1%;
 
     & > a {
         display: inline-block;
@@ -75,16 +75,21 @@ aside > p:first-child {
     grid-template-rows: subgrid;
     grid-row: 2 / -1;
     justify-content: center;
+    align-items: center;
     font-weight: bold;
     font-size: 1.6rem;
 }
 
-aside a {
+.anchor_container > a {
     display: flex;
     align-items: center;
     gap: calc(var(--font-size-base) / 2);
     color: var(--black);
     text-decoration: none;
+}
+
+.anchor_container > a:last-child {
+    color: gold;
 }
 
 header {
