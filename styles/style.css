@@ -37,8 +37,7 @@
 aside { /* position fixed */ 
     grid-area: sidebar;
     display: grid;
-    grid-template-rows: auto repeat(6, 1fr);
-    gap: var(--font-size-base); /* gap */
+    grid-template-rows: repeat(7, 1fr);
     height: 100vh; /*Play*/
     background-color: var(--violet);
 }
