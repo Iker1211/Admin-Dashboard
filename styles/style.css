@@ -17,8 +17,8 @@
 }
 
 .container {
-    display: grid;
-    grid-template: [first-row-line] auto 4fr [last-row-line] /
+    display: grid; /* Play */
+    grid-template: [first-row-line] 1fr 4fr [last-row-line] /
     [first-column-line] 1fr 4fr [last-column-line];
      grid-template-areas: 
     "sidebar header"
@@ -36,7 +36,7 @@ aside {
 
 header {
     grid-area: header;
-    height: 10vh; /* Play */
+    height: fill; /* Play */
     background-color: var(--yellow);
 }
 
