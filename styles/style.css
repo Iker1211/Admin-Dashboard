@@ -12,3 +12,35 @@
     --font-size-base: 1rem;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template: [first-row-line] auto 4fr [last-row-line] /
+    [first-column-line] 1fr 4fr [last-column-line];
+     grid-template-areas: 
+    "sidebar header"
+    "sidebar main"
+    "sidebar main"
+    "sidebar main"
+    "sidebar main"; 
+}
+
+aside {
+    grid-area: sidebar;
+    height: 100vh; /*Play*/
+    background-color: var(--violet);
+}
+
+header {
+    grid-area: header;
+    height: 10vh; /* Play */
+    background-color: var(--yellow);
+}
+
+main {
+    grid-area: main;
+    background-color: var(--blue);
+}
