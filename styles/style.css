@@ -42,10 +42,6 @@ aside { /* position fixed */
     background-color: var(--violet);
 }
 
-h1 {
-    place-self: center;
-}
-
 a {
     color: var(--white);
 }
