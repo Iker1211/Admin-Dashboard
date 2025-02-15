@@ -17,9 +17,14 @@
     src: url('../assets/fonts/open-sans.woff2') format(woff2);
 }
 
+@font-face {
+    font-family: 'cormorant_garamond';
+    src: url('../assets/fonts/Cormorant-Garamond-Regular.woff2') format(woff2);
+}
+
 *, html {
     box-sizing: border-box;
-    font-family: 'open_sans';
+    font-family: 'cormorant_garamond';
 }
 
 body {
@@ -62,6 +67,8 @@ aside { /* position fixed */
     grid-template-rows: subgrid;
     grid-row: 2 / -1;
     justify-content: center;
+    font-weight: bold;
+    font-size: 1.6rem;
 }
 
 aside a {
