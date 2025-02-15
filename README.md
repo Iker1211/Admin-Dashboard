@@ -5,4 +5,3 @@ As part of The Odin Project curriculum (TOP), I made a simple dashboard prototyp
 - HTML5
 - CSS3
 - JavaScript
-- Figma
