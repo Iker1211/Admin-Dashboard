@@ -135,7 +135,7 @@ aside { /* position fixed */
     }
 
     & > span {
-        animation: gold_text_animation 3s 1;
+        animation: gold_text_animation 5s 1;
         position: absolute;
         left: calc(var(--font-size-base) * 6.5);
     }
@@ -167,16 +167,19 @@ aside { /* position fixed */
 }
 
 @keyframes gold_icon_animation {
-    0% {
-        color: var(--black);
-    }
-
     30% {
         width: 2vw;
+        box-shadow:  inset -5px -5px 5px  var(--white), inset 20px 20px 20px var(--black); 
     }
-
+    /* The same but contrary colors in the right */
     85% {
         width: 3vw;
+        box-shadow: inset 30px 20px 20px var(--black), inset -20px -10px 5px var(--white);
+    }
+
+    100% {
+        width: 1.5vw;
+        box-shadow: inset 30px 20px 20px var(--black), inset -20px -10px 5px var(--white);
     }
 }
 
@@ -185,14 +188,23 @@ aside { /* position fixed */
         color: gold;
     }
 
-    30% {
-        letter-spacing: 10px;
+    20% {
         color: color-mix(in srgb, gold 50%);
+    }
+
+    50% {
+        letter-spacing: 10px;
+        color: color-mix(in srgb, gold 80%);
+        /* box-shadow: 10px 5px 5px var(--white);  */
+    }
+
+    70% {
+
+        color: transparent;
     }
     
     85% {
-        letter-spacing: 4px;
-        color: transparent;
+        display: none;
     }
 }
 
