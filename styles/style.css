@@ -107,6 +107,14 @@ aside { /* position fixed */
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-flow: column;
+    text-shadow: 1px 1px var(--gray);
+
+    & img {
+        box-sizing: content-box;
+        padding: 2px;
+        border-radius: 50% 50%;
+        box-shadow: 1px 1px 1px var(--gray);
+    }
 
     & img:nth-child(2) {
         display: none;
@@ -186,16 +194,18 @@ aside { /* position fixed */
 @keyframes gold_text_animation {
     0% {
         color: gold;
+        text-shadow: none;
     }
 
     20% {
         color: color-mix(in srgb, gold 50%);
+        text-shadow: none;
     }
 
     50% {
         letter-spacing: 10px;
         color: color-mix(in srgb, gold 80%);
-        /* box-shadow: 10px 5px 5px var(--white);  */
+        text-shadow: none;
     }
 
     70% {
@@ -222,20 +232,19 @@ aside { /* position fixed */
     }
     
     @keyframes mobile_gold_icon_animation {
-        0% {
-            color: var(--black);
-        }
-    
         30% {
             width: 6vw;
+            box-shadow:  inset -5px -5px 5px  var(--white), inset 20px 20px 20px var(--black); 
         }
-    
+        /* The same but contrary colors in the right */
         85% {
             width: 9vw;
+            box-shadow: inset 30px 20px 20px var(--black), inset -20px -10px 5px var(--white);
         }
-
+    
         100% {
-            width: 9vw;
+            width: 4.5vw;
+            box-shadow: inset 30px 20px 20px var(--black), inset -20px -10px 5px var(--white);
         }
     }
 
