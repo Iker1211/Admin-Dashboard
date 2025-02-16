@@ -92,9 +92,47 @@ aside { /* position fixed */
     text-decoration: none;
 }
 
-.anchor_container > a:last-child {
-    color: gold;
+.anchor_container > a:hover {
+    
+     & img {
+        animation: icon_animation 2s 1;
+    }
+    /*
+    & span {
+        animation: text_animation 3s 1;
+    } */
+
 }
+
+.anchor_container > a:last-child {
+    & img:nth-child(2) {
+        display: none;
+    }
+}
+
+.anchor_container > a:last-child:hover {
+    
+    & img:first-child {
+        display: none;
+    }
+
+    & img:nth-child(2) {
+        display: inline-block;
+    }
+
+    & img {
+        animation: gold_icon_animation 3s 1;
+    }
+
+    & span {
+        animation: gold_text_animation 3s 1;
+    }
+
+}
+
+/* .anchor_container > a:last-child {
+    color: gold;
+} */
 
 header {
     grid-area: header;
@@ -107,10 +145,70 @@ main {
     /* background-color: var(--blue); */
 }
 
+@keyframes text_animation {
+    0% {
+        color: var(--black);
+    }
+
+    30% {
+        letter-spacing: 10px;
+    }
+
+    85% {
+        letter-spacing: 4px;
+    }
+}
+
+@keyframes icon_animation {
+    0% {
+        color: black;
+    }
+
+    30% {
+        width: 2vw;
+    }
+}
+
+@keyframes gold_icon_animation {
+    0% {
+        color: black;
+    }
+
+    30% {
+        width: 2vw;
+    }
+
+    85% {
+        width: 3vw;
+    }
+}
+
+@keyframes gold_text_animation {
+    0% {
+        color: gold;
+    }
+
+    30% {
+        letter-spacing: 10px;
+    }
+
+    85% {
+        letter-spacing: 4px;
+    }
+}
+
 /* Mobile and Tablets */
 @media(max-width: 768px) {
     span {
         display: none;
+    }
+
+    .anchor_container > a:hover {
+    
+        & img{
+            width: 5vw;
+        }
+    
     }
 
     aside > img {
