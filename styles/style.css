@@ -48,7 +48,7 @@ body {
 header {
     grid-area: header;
     display: grid;
-    grid-template-rows: 0.7fr minmax(min-content, 1fr);
+    grid-template-rows: 0.7fr min-content;
 }
 
 .first-header-row {
@@ -106,13 +106,48 @@ header {
 
     display: grid;
     grid-template-columns: 3fr 2fr;
+    justify-items: center;
 
     & > .greetings {
         display: flex;
+        gap: 1rem;
+        box-sizing: border-box;
+        height: min-content;
 
         & img {
             width: 5vw;
             height: 5vw;
+        }
+
+        & .greetings-text {
+
+            & h1 {
+                width: min-content;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            & span {
+                font-size: 1rem;
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    & >.buttons {
+        display: flex;
+        align-items: start;
+        box-sizing: border-box;
+        padding: 1rem;
+        gap: 0.5rem;
+        height: min-content;
+
+        button {
+            color: var(--white);
+            background-color: var(--black);
+            border-radius: 10px;
+            cursor: pointer;
         }
     }
 }
