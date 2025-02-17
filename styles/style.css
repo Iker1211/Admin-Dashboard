@@ -35,7 +35,7 @@ body {
 
 .container {
     display: grid; /* Play */
-    grid-template: [first-row-line] 1fr 4fr [last-row-line] /
+    grid-template: [first-row-line] 2fr 3fr [last-row-line] /
     [first-column-line] 1fr 4fr [last-column-line];
      grid-template-areas: 
     "sidebar header"
@@ -48,7 +48,7 @@ body {
 header {
     grid-area: header;
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 0.7fr minmax(min-content, 1fr);
 }
 
 .first-header-row {
@@ -65,6 +65,7 @@ header {
         & input[type="search"] {
         background-color: transparent;
         flex: 1 1 auto;
+        border: auto solid linear-gradient(90deg, white, black);
         border-radius: 10px;
         } 
 
@@ -99,6 +100,21 @@ header {
     /* #notification-icon {
         place-self: end;
     } */
+}
+
+.second-header-row {
+
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+
+    & > .greetings {
+        display: flex;
+
+        & img {
+            width: 5vw;
+            height: 5vw;
+        }
+    }
 }
 
 main {
@@ -301,6 +317,17 @@ aside { /* position fixed */
         width: 50%;
         height: 50%;
         place-self: center;
+    }
+
+    .second-header-row {
+        
+        & .greetings {
+            
+            & img {
+                width: 10vw;
+                height: 10vw;
+            }
+        }
     }
 
     @keyframes mobile_icon_animation {
