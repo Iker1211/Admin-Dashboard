@@ -5,6 +5,7 @@
     --black: #1a1a1a;
     --gray: #5a5a5a;
     --yellow: #e3c200;
+    --gold: gold;
     --red: #f3464a;
     --green: #12e193;
     --line-height: 1.6;
@@ -46,8 +47,58 @@ body {
 
 header {
     grid-area: header;
-    height: fill; /* Play */
-    /* background-color: var(--yellow); */
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.first-header-row {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-content: center;
+
+    column-gap: 2rem;
+
+    & form {
+        display: flex;
+        gap: 1rem;
+
+        & input[type="search"] {
+        background-color: transparent;
+        flex: 1 1 auto;
+        border-radius: 10px;
+        } 
+
+        & button[type="submit"] {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            flex: 0 0 auto;
+        }
+    }
+
+    .profile-section {
+        justify-self: center;
+        display: flex;
+        gap: 1rem;
+        padding: 0 1rem 0 0;
+
+         & > h2 {
+            width: min-content;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        & #profile-photo, #notification-icon {
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+
+    /* */
+    /* #notification-icon {
+        place-self: end;
+    } */
 }
 
 main {
@@ -80,7 +131,7 @@ aside { /* position fixed */
 
     & > a {
         display: inline-block;
-        color: gold;
+        color: var(--gold);
     }
 }
 
@@ -193,18 +244,18 @@ aside { /* position fixed */
 
 @keyframes gold_text_animation {
     0% {
-        color: gold;
+        color: var(--gold);
         text-shadow: none;
     }
 
     20% {
-        color: color-mix(in srgb, gold 50%);
+        color: color-mix(in srgb, var(--gold) 50%);
         text-shadow: none;
     }
 
     50% {
         letter-spacing: 10px;
-        color: color-mix(in srgb, gold 80%);
+        color: color-mix(in srgb, var(--gold) 80%);
         text-shadow: none;
     }
 
@@ -220,33 +271,6 @@ aside { /* position fixed */
 
 /* Mobile and Tablets */
 @media(max-width: 768px) {
-
-    @keyframes mobile_icon_animation {
-        0% {
-            color: var(--black);
-        }
-    
-        30% {
-            width: 6vw;
-        }
-    }
-    
-    @keyframes mobile_gold_icon_animation {
-        30% {
-            width: 6vw;
-            box-shadow:  inset -5px -5px 5px  var(--white), inset 20px 20px 20px var(--black); 
-        }
-        /* The same but contrary colors in the right */
-        85% {
-            width: 9vw;
-            box-shadow: inset 30px 20px 20px var(--black), inset -20px -10px 5px var(--white);
-        }
-    
-        100% {
-            width: 4.5vw;
-            box-shadow: inset 30px 20px 20px var(--black), inset -20px -10px 5px var(--white);
-        }
-    }
 
     span {
         display: none;
@@ -277,5 +301,32 @@ aside { /* position fixed */
         width: 50%;
         height: 50%;
         place-self: center;
+    }
+
+    @keyframes mobile_icon_animation {
+        0% {
+            color: var(--black);
+        }
+    
+        30% {
+            width: 6vw;
+        }
+    }
+    
+    @keyframes mobile_gold_icon_animation {
+        30% {
+            width: 6vw;
+            box-shadow:  inset -5px -5px 5px  var(--white), inset 20px 20px 20px var(--black); 
+        }
+        /* The same but contrary colors in the right */
+        85% {
+            width: 9vw;
+            box-shadow: inset 30px 20px 20px var(--black), inset -20px -10px 5px var(--white);
+        }
+    
+        100% {
+            width: 4.5vw;
+            box-shadow: inset 30px 20px 20px var(--black), inset -20px -10px 5px var(--white);
+        }
     }
 }

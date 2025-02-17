@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+  <!-- Original bell path -->
+  <path d="M12 20V21H10V20H8V18H14V20H12M2 15H3V14H4V6H5V4H6V3H8V2H10V1H12V2H14V3H16V4H17V6H18V14H19V15H20V17H2V15M6 15H16V7H15V5H13V4H9V5H7V7H6V15Z" />
+  <!-- Red notification circle -->
+  <circle cx="17" cy="7" r="5" fill="#ff0000"/>
+  <!-- Number 2 -->
+  <text x="17" y="8.5" text-anchor="middle" fill="white" font-size="5" font-family="Arial">2</text>
+</svg>
