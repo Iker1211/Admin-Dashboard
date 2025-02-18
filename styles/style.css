@@ -247,6 +247,21 @@ main {
         & card {
             border: none;
             background-color: transparent;
+
+        & h4 {
+            position: relative;
+        }
+
+            & h4::after {
+                content: '';
+                position: absolute;
+                top: 1.4rem;
+                right: 50px;
+                width: 75%;
+                height: 1px;
+                background-color: black;
+                box-shadow: 1px 1px 5px red;
+            }
         }
     }
 }
@@ -386,19 +401,22 @@ aside { /* position fixed */
         text-shadow: none;
     }
 
-    50% {
-        letter-spacing: 10px;
+    35% {
         color: color-mix(in srgb, var(--gold) 80%);
+    }
+
+    50% {
+        letter-spacing: 6px;
+        color: transparent;
         text-shadow: none;
     }
 
     70% {
-
-        color: transparent;
+        color: gold;
     }
     
     85% {
-        display: none;
+        display: gold;
     }
 }
 
