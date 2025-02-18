@@ -23,7 +23,7 @@
 }
 
 body {
-    background-image: url(../assets/background/background-photo.jpg);
+    background-image: url(../assets/background/bg-2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -261,7 +261,7 @@ main {
     }
 }
 
-aside { /* position fixed */ 
+aside { 
     grid-area: sidebar;
     display: grid;
     position: relative;
