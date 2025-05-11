@@ -1,5 +1,5 @@
 # Admin-Dashboard
-As part of The Odin Project curriculum (TOP), I made a simple dashboard prototype. Used multiple grids and subgrids to layout. @keyframes for sidebar animations and a @media-query for the future. 
+As part of The Odin Project curriculum (TOP), I made a simple dashboard prototype. Used multiple grids and subgrids to layout. @keyframes for sidebar animations and a @media-query for the future. Essential components.
 
 ## Skills
 - HTML5
